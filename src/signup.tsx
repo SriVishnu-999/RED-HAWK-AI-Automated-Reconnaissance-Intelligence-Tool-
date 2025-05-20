@@ -7,10 +7,10 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBWHzzF9iiq5ZW-lau2t86xy81qb9gKCPg",
-    authDomain: "ai-bug-detection.firebaseapp.com",
-    projectId: "ai-bug-detection",
-    storageBucket: "ai-bug-detection.firebasestorage.app",
+    apiKey: "your_api_key_here",
+    authDomain: "your_domain_here",
+    projectId: "your_projectID_here",
+    storageBucket: "your_storage_bucket_here",
     messagingSenderId: "176658157137",
     appId: "1:176658157137:web:52386eea11b9feaa8c3270",
     measurementId: "G-GV81YTDPXG"
