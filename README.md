@@ -56,8 +56,10 @@
 
 ```bash
 git clone https://github.com/yourusername/redhawk-ai.git
-cd redhawk-ai
-bash redhawk-ai.sh
+cd AI-Based Automated Bug Fixing System
+cd src
+node server.js   --- this is server side code (run this separately)  --- 1 terminal
+npm run dev      --- this is the client side (run this separately)   --- 2 terminal
 ```
 
 ## 🧠 AI Assistant Integration (Optional)
