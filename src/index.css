@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+/* Enhanced background gradients */
+.bg-gradient-to-br {
+  background: linear-gradient(
+    to bottom right,
+    #000000,
+    #1a0b2e,
+    #261230
+  );
+}
+
+/* Enhanced blob animations with more vibrant colors */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Enhanced spinning animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Enhanced gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Enhanced blob colors and effects */
+.animate-blob {
+  animation: blob 7s infinite;
+  background: radial-gradient(circle at center, var(--tw-gradient-from), transparent 70%);
+}
+
+/* First blob - Purple */
+div.animate-blob:nth-child(1) {
+  --tw-gradient-from: rgba(147, 51, 234, 0.7);
+  filter: blur(40px);
+}
+
+/* Second blob - Cyan */
+div.animate-blob:nth-child(2) {
+  --tw-gradient-from: rgba(45, 212, 191, 0.7);
+  filter: blur(40px);
+}
+
+/* Third blob - Pink */
+div.animate-blob:nth-child(3) {
+  --tw-gradient-from: rgba(236, 72, 153, 0.7);
+  filter: blur(40px);
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-spin-fast {
+  animation: spin-fast 4s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 4s ease-in-out infinite alternate;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  background-image: linear-gradient(
+    -45deg,
+    #6366f1,
+    #a855f7,
+    #ec4899,
+    #6366f1
+  );
+}
+
+/* Enhanced glow effects */
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 1rem rgba(168, 85, 247, 0.7));
+}
+
+/* Enhanced glassmorphism */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced gradient borders */
+.bg-gradient-to-r {
+  background-size: 200% 200%;
+}
+
+/* Custom gradient text */
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.4;
+}
+
+/* Enhanced hover effects */
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 2rem rgba(168, 85, 247, 0.5);
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -5px rgba(168, 85, 247, 0.3);
+}
+
+/* Button hover effects */
+.hover-button {
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.hover-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.hover-button:hover::before {
+  left: 100%;
+}
+
+.hover-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px -3px rgba(168, 85, 247, 0.4);
+}
+
+/* Link hover effects */
+.hover-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hover-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  transition: width 0.3s ease;
+}
+
+.hover-link:hover::after {
+  width: 100%;
+}
+
+/* Icon hover effects */
+.hover-icon {
+  transition: all 0.3s ease;
+}
+
+.hover-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 0.75rem rgba(168, 85, 247, 0.5));
+}
+
+/* Feature card hover effects */
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px -15px rgba(168, 85, 247, 0.25);
+}
+
+.feature-card:hover .feature-icon {
+  animation: pulse 2s infinite;
+}
+
+/* Pricing card hover effects */
+.pricing-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.35);
+}
+
+/* Testimonial card hover effects */
+.testimonial-card {
+  transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow: 0 15px 35px -10px rgba(168, 85, 247, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366f1, #a855f7);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4f46e5, #9333ea);
+}
