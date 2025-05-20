@@ -64,9 +64,13 @@ npm run dev      --- this is the client side (run this separately)   --- 2 termi
 
 ## 🧠 AI Assistant Integration (Optional)
 
-- Set your OpenAI API Key in the environment:
+- Set your firebase API Key in the environment:
 ```bash
-export OPENAI_API_KEY="your-api-key"
+const firebaseConfig = {
+    apiKey: "your_api_key_here",
+    authDomain: "your_domain_here",
+    projectId: "your_projectID_here",
+    storageBucket: "your_storage_bucket_here",
 ```
 
 - Once enabled, AI will interpret key scan data and provide a human-readable summary.
