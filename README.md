@@ -37,11 +37,18 @@
 
 ## 📸 Screenshots
 
-### 🔎 Recon in Action
-![recon](screenshots/recon-demo.gif)
+![1](https://github.com/user-attachments/assets/c9bbd643-0480-4b99-b920-4589a394a9ae)
 
-### 🤖 AI Threat Interpretation
-![ai](screenshots/ai-summary.png)
+![2](https://github.com/user-attachments/assets/4c1bf325-1720-4076-a117-07d4cfe3cf35)
+
+![3](https://github.com/user-attachments/assets/a302d469-d3d3-4890-a224-36ae61c73043)
+
+![4](https://github.com/user-attachments/assets/18dc394c-f250-49ee-a867-bb12b5929263)
+
+![5](https://github.com/user-attachments/assets/950b6132-5976-4ce7-9acd-1e34d1881e66)
+
+![6](https://github.com/user-attachments/assets/d49876c1-3f50-4bc1-aa94-4ca2a4968497)
+
 
 ---
 
@@ -51,3 +58,29 @@
 git clone https://github.com/yourusername/redhawk-ai.git
 cd redhawk-ai
 bash redhawk-ai.sh
+```
+
+## 🧠 AI Assistant Integration (Optional)
+
+- Set your OpenAI API Key in the environment:
+```bash
+export OPENAI_API_KEY="your-api-key"
+```
+
+- Once enabled, AI will interpret key scan data and provide a human-readable summary.
+
+---
+
+## 📚 Use Case Scenarios
+
+- Ethical hacking bootcamps
+- Capture The Flag (CTF) challenges
+- Red team simulation
+- Reconnaissance labs
+- Beginner cybersecurity portfolio projects
+
+---
+
+> ⚠️ For educational and ethical hacking purposes only. Do not use on unauthorized systems.
+
+---
