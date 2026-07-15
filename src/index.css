@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+/* Base Terminal Colors and Themes */
+body {
+  background-color: #030008;
+  color: #00ff66;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+}
+
+/* CRT Scanline and Screen Flicker Effects */
+.crt {
+  position: relative;
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 5;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389600138058751px 0 1px rgba(0,30,255,0.5), -0.4389600138058751px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 2.792430638531182px 0 1px rgba(0,30,255,0.5), -2.792430638531182px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 0.0278218122026774px 0 1px rgba(0,30,255,0.5), -0.0278218122026774px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.051111529132408285px 0 1px rgba(0,30,255,0.5), -0.051111529132408285px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: -0.6621560317371201px 0 1px rgba(0,30,255,0.5), 0.6621560317371201px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: -2.13142205092751px 0 1px rgba(0,30,255,0.5), 2.13142205092751px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 1.8807322626688277px 0 1px rgba(0,30,255,0.5), -1.8807322626688277px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: -1.4077840308058203px 0 1px rgba(0,30,255,0.5), 1.4077840308058203px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 2.2054034873489513px 0 1px rgba(0,30,255,0.5), -2.2054034873489513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: -2.316038250268689px 0 1px rgba(0,30,255,0.5), 2.316038250268689px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: -0.8509741270032361px 0 1px rgba(0,30,255,0.5), 0.8509741270032361px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+}
+
+.crt-text {
+  animation: textShadow 1.6s infinite;
+}
+
+/* Cyber HUD Panel Cuts */
+.cyber-panel {
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.1);
+  background: rgba(4, 2, 8, 0.85);
+}
+
+.cyber-panel-blue {
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+  background: rgba(4, 2, 8, 0.85);
+}
+
+.cyber-panel-red {
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);
+  background: rgba(4, 2, 8, 0.85);
+}
+
+/* Hacker Cyber button styles */
+.cyber-btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 10% 100%, 0 70%);
+  border: 1px solid rgba(0, 255, 102, 0.8);
+  background: rgba(0, 255, 102, 0.1);
+  color: #00ff66;
+  text-shadow: 0 0 5px #00ff66;
+}
+
+.cyber-btn:hover {
+  background: #00ff66;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.8);
+  text-shadow: none;
+}
+
+.cyber-btn-cyan {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 10% 100%, 0 70%);
+  border: 1px solid rgba(0, 240, 255, 0.8);
+  background: rgba(0, 240, 255, 0.1);
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff;
+}
+
+.cyber-btn-cyan:hover {
+  background: #00f0ff;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+  text-shadow: none;
+}
+
+.cyber-btn-red {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 10% 100%, 0 70%);
+  border: 1px solid rgba(239, 68, 68, 0.8);
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  text-shadow: 0 0 5px #ef4444;
+}
+
+.cyber-btn-red:hover {
+  background: #ef4444;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+  text-shadow: none;
+}
+
+/* Scanline animation */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline-effect::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  background: rgba(0, 255, 102, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.8);
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Glitch animation keys */
+@keyframes glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  60% {
+    clip-path: inset(75% 0 5% 0);
+  }
+  80% {
+    clip-path: inset(15% 0 80% 0);
+  }
+  100% {
+    clip-path: inset(80% 0 5% 0);
+  }
+}
+
+.glitch-hover:hover {
+  animation: glitch 1s steps(2, start) infinite;
+}
+
+/* Glow effects */
+.glow-terminal {
+  text-shadow: 0 0 5px rgba(0, 255, 102, 0.5), 0 0 10px rgba(0, 255, 102, 0.3);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.5), 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.glow-red {
+  text-shadow: 0 0 5px rgba(239, 68, 68, 0.5), 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030008;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 102, 0.3);
+  border: 1px solid rgba(0, 255, 102, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 102, 0.7);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.8);
+}
